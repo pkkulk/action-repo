@@ -64,8 +64,6 @@ def send_merge():
 
 if __name__ == "__main__":
     print("Starting simulation...")
-    # Add a small delay to ensure app is ready if running in sequence, 
-    # though usually manual run is preferred.
     time.sleep(1) 
     
     send_push()
