@@ -9,7 +9,7 @@ def send_push():
     headers = {'X-GitHub-Event': 'push', 'Content-Type': 'application/json'}
     data = {
         "ref": "refs/heads/staging",
-        "pusher": {"name": "Travis"}
+        "pusher": {"name": "Prathmesh"},
     }
     try:
         response = requests.post(URL, json=data, headers=headers)
