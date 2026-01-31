@@ -9,7 +9,7 @@ def send_push():
     headers = {'X-GitHub-Event': 'push', 'Content-Type': 'application/json'}
     data = {
         "ref": "refs/heads/staging",
-        "pusher": {"name": "Prathmesh"},
+        "pusher": {"name": "Prathmesh"}
     }
     try:
         response = requests.post(URL, json=data, headers=headers)
@@ -26,7 +26,7 @@ def send_pr_open():
     data = {
         "action": "opened",
         "pull_request": {
-            "user": {"login": "Travis"},
+            "user": {"login": "Prathmesh"},
             "head": {"ref": "staging"},
             "base": {"ref": "master"},
             "merged": False
@@ -48,7 +48,7 @@ def send_merge():
         "action": "closed",
         "pull_request": {
             "merged": True,
-            "merged_by": {"login": "Travis"},
+            "merged_by": {"login": "Prathmesh"},
             "head": {"ref": "dev"},
             "base": {"ref": "master"}
         }
